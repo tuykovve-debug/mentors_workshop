@@ -8,3 +8,5 @@ sum() {
   local num2="$2"
   echo $((num1 + num2))
 }
+
+#Скриншот в файле Screenshot_task_4.png
