@@ -1,5 +1,4 @@
-echo "Текущий path"
-echo "$PATH"
+echo "Текущий path: $PATH"
 
 if [ -z "$dir" ]; then
   echo "Укажите директорию для добавления в PATH"
@@ -9,3 +8,5 @@ fi
   export PATH="$PATH:$dir"
 
   echo "$PATH"
+
+  #Вторая часть задания в файле README

@@ -1,20 +1,18 @@
 for entry in *; do
   if [ -d "$entry" ]; then
+    type="каталог"
+  elif [ -f "$entry" ]; then
     type="файл"
-    elif [ -f "$entry" ]; then
-      type="каталог"
-      elif [ -L "$entry" ]; then
-        type="ссылка"
-        else
-          type="другой тип"
+  elif [ -L "$entry" ]; then
+    type="ссылка"
+  else
+    type="другой тип"
 fi
 echo "$entry - $type"
 done
 
-echo "============"
-
-if [ "$#" -eq 0 ]; then
-  echo "Пожалуйста, укажите имя файла как аргумент скрипта."
+if [ "$#" -ne 1 ]; then
+  echo "Укажите имя файла как аргумент скрипта."
   exit 1
 fi
 
@@ -27,8 +25,6 @@ else
 fi
 
 echo ""
-
-echo "============"
 
 echo "Информация о файлах:"
 for entry in *; do
