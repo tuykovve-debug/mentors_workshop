@@ -1,0 +1,5 @@
+token="8002481098:AAFNR_T-bl3i3LPjkMAkXvr7hY1W5izgf70"
+chat_id="8002481098"
+message="test"
+url="https://api.telegram.org/bot$token/sendMessage"
+curl -s -X POST "$url" -d chat_id="$chat_id" -d text="$message"
